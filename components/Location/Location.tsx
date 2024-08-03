@@ -23,10 +23,10 @@ export default function Location() {
         <GoogleMap />
       </div>
       <div className="flex flex-col items-center  ">
-        <Link href={"https://www.google.com/maps/@-6.3682679,106.7978322,20.59z?entry=ttu"} className="text-center underline text-xl font-semibold  border-cream-100 text-cream-100" target="_blank" rel="noopener noreferrer" >
+        <Link href={"https://www.google.com/maps/@-6.3682679,106.7978322,20.59z?entry=ttu"} className="text-center underline mb-3 md:text-xl text-xs font-semibold  border-cream-100 text-cream-100" target="_blank" rel="noopener noreferrer" >
         Jl. Mushola 34, Tanah Baru, Kecamatan Beji, Kota Depok, Jawa Barat 16426
         </Link>
-        <p className="text-center text-lg max-w-xs text-cream-100">
+        <p className="text-center sm:text-lg text-sm max-w-xs text-cream-100">
           Doa Restu anda merupakan karunia yang sangat berarti bagi kami.
         </p>
       </div>

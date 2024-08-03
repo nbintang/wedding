@@ -54,7 +54,7 @@ export default function Payment() {
         </Button>
       </div>
       <div>
-        <p className="text-center text-lg max-w-md text-cream-100">
+        <p className="text-center sm:text-lg text-sm max-w-md text-cream-100">
           Jika memberi adalah tanda kasih anda, anda dapat memberikan hadiah
           secara cashless ke rekening mempelai atau kado ke alamat mempelai
         </p>

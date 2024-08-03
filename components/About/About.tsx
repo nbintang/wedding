@@ -24,7 +24,7 @@ export default function About() {
         <h1 className={`${parisienFont.className} text-4xl font-bold`}>
           Syafira Rahmani{" "}
         </h1>
-        <p>Anak Kedua dari keluarga Bapak Indra Utama dan Ibu Harli Yunita</p>
+        <p className="text-sm">Anak Kedua dari keluarga Bapak Indra Utama dan Ibu Harli Yunita</p>
         <div className="bg-cream-700 p-3 shadow rounded-full w-60 h-60 sm:h-72 sm:w-72 grid place-items-center ">
           <Image
             src="/images/assets/Perempuan.png"
@@ -44,7 +44,7 @@ export default function About() {
         <h1 className={`${parisienFont.className} text-4xl font-bold`}>
           Ibnu Purnomo Shidiq
         </h1>
-        <p>Anak Pertama dari keluarga Bapak Adikun Achmad Shodikun dan Ibu Daimah</p>
+        <p className="text-sm">Anak Pertama dari keluarga Bapak Adikun Achmad Shodikun dan Ibu Daimah</p>
 
         <div className="bg-cream-700 shadow p-3 sm:h-72 sm:w-72 w-60 h-60  rounded-full grid place-items-center">
           <Image

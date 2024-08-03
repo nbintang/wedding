@@ -9,7 +9,7 @@ const NavbarMobile = () => {
   const { handleClick } = useScrollSections();
   return (
     <Sheet>
-      <SheetTrigger className="flex " asChild>
+      <SheetTrigger  className="flex " asChild>
         <Button
           variant="default"
           size="icon"
