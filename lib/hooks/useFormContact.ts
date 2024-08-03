@@ -43,8 +43,23 @@ const useFormContact = () => {
           description:
             "Terimakasih sudah memberikan pesan, pesan akan di lihat oleh kedua pengantin.",
         });
+        if(!values){
+          toast({
+            variant: "destructive",
+            title: "Gagal Mengirim Pesan",
+            description:
+              "Terjadi kesalahan saat mengirim pesan, silahkan coba kembali.",
+          })
+          form.reset();
+        }
       }
     } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Gagal Mengirim Pesan",
+        description:
+          "Terjadi kesalahan pada server, silahkan coba kembali.",
+      })
       console.error("Error sending contact form:", error);
     }
     setIsLoading(false);
