@@ -1,25 +1,18 @@
-import axios from "axios";
-
 export const sendContactForm = async (
   username: string,
   messages: string,
   assignment: string
 ) => {
-try {
-    const response = await axios.post("/api/contact", {
-        username,
-        messages,
-        assignment,
-      },{
-        headers:{
-            "Content-Type": "application/json",
-        }
-      });
-
-    console.log(response.data);
-    
-} catch (error) {
+  try {
+    await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, messages, assignment }),
+      cache: "no-store",
+    });
+  } catch (error) {
     console.log(error);
-    
-}
+  }
 };

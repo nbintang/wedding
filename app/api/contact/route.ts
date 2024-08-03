@@ -45,7 +45,6 @@ export async function POST(req: NextRequest) {
 export async function GET(req: NextRequest) {
   try {
     const data = await prisma.user.findMany();
-    console.log(data);
     return NextResponse.json({
       success: true,
       message: "Data retrieved successfully",

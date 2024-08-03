@@ -25,7 +25,7 @@ export default function Payment() {
             width={100}
             height={100}
           />
-          <h3 className="text-[#00a39e] text-3xl font-semibold">
+          <h3 className="text-[#00a39e] text-2xl sm:text-3xl font-bold">
             Bank Syariah Indonesia
           </h3>
         </div>

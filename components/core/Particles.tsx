@@ -7,13 +7,14 @@ import { loadSlim } from "tsparticles-slim";
 
 const ParticlesComponent: React.FC = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-  
     // Initialize tsParticles
     await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {},
+    async (container: Container | undefined) => {
+      
+    },
     []
   );
 
@@ -23,12 +24,11 @@ const ParticlesComponent: React.FC = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        fullScreen: { enable: true },
         fpsLimit: 60,
 
         particles: {
           number: {
-            value: 100,
+            value: 60,
             density: {
               enable: true,
               area: 800,

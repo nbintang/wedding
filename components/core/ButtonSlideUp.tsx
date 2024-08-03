@@ -7,7 +7,6 @@ import { useScrollSections } from "@/lib/hooks/useActions";
 
 const ButtonSlideUp = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const {handleClick} = useScrollSections();
 
   const toggleVisibility = () => {
     if (window.scrollY > 200) {
@@ -25,17 +24,16 @@ const ButtonSlideUp = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-10 right-12">
+    <div className="fixed bottom-9 right-9">
+      <Link
+        href={"#header"}
      
-        <Link
-          href={"#header"}
-          id="#header"
-          onClick={() => handleClick("header")}
-          className={`${isVisible ? "opacity-100" : "opacity-0"}  hover:scale-110 transition-all duration-300 cursor-pointer bg-cream-900 hover:opacity-90 rounded-md w-12 h-12 flex justify-center items-center shadow-md text-cream-300`}
-        >
-          <ChevronUp />
-        </Link>
-
+        className={`${
+          isVisible ? "opacity-100" : "opacity-0"
+        }  hover:scale-110 transition-all duration-300 cursor-pointer bg-cream-900 hover:opacity-90 rounded-md w-12 h-12 flex justify-center items-center shadow-md text-cream-300`}
+      >
+        <ChevronUp />
+      </Link>
     </div>
   );
 };

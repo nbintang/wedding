@@ -1,8 +1,5 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -61,12 +58,12 @@ export function SendForm() {
             <FormItem>
               <FormLabel className="text-cream-100 text-xl">Pesan</FormLabel>
               <FormDescription className="text-cream-300 text-sm">
-              Pesan dan doa untuk kedua pengantin
+                Pesan dan doa untuk kedua pengantin
               </FormDescription>
               <FormControl>
                 <Textarea
                   placeholder="Kirim pesan yang ingin disampaikan"
-                  className="placeholder:text-cream-900 bg-cream-100  "
+                  className="placeholder:text-cream-900 h-32 bg-cream-100  "
                   {...field}
                 />
               </FormControl>
@@ -97,7 +94,7 @@ export function SendForm() {
                     </SelectTrigger>
                   </FormControl>
 
-                  <SelectContent  className="placeholder:text-cream-900 text-cream-900 bg-cream-100">
+                  <SelectContent className="placeholder:text-cream-900 text-cream-900 bg-cream-100">
                     <SelectItem
                       value="Hadir dalam acara"
                       className="cursor-pointer bg-cream-100"

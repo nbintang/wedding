@@ -1,16 +1,19 @@
-import { zodResolver } from '@hookform/resolvers/zod';
-import  { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { sendContactForm } from '../sendContactForm';
-import { z } from 'zod';
-import { toast } from '@/components/ui/use-toast';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { sendContactForm } from "../sendContactForm";
+import { z } from "zod";
+import { toast } from "@/components/ui/use-toast";
 const formSchema = z.object({
   username: z.string().min(2, {
     message: "nama harus lebih dari 5 karakter",
   }),
-  messages: z.string().min(10, {
-    message: "Pesan harus minimal 10 karakter",
-  }).max(500, { message: "Pesan harus maksimal 500 karakter" }),
+  messages: z
+    .string()
+    .min(10, {
+      message: "Pesan harus minimal 10 karakter",
+    })
+    .max(500, { message: "Pesan harus maksimal 500 karakter" }),
   assignment: z.string().min(1, { message: "Pilih Kehadiran anda" }),
 });
 
@@ -39,11 +42,10 @@ const useFormContact = () => {
           title: "Pesan Terkirim",
           description:
             "Terimakasih sudah memberikan pesan, pesan akan di lihat oleh kedua pengantin.",
-
         });
       }
     } catch (error) {
-      console.error('Error sending contact form:', error);
+      console.error("Error sending contact form:", error);
     }
     setIsLoading(false);
   }

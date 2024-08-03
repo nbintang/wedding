@@ -20,16 +20,19 @@ export default function About() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 items-center ">
+      <div className="flex flex-col gap-3 items-center">
         <h1 className={`${parisienFont.className} text-4xl font-bold`}>
-          Syafira Rahmani{" "}
+          Ibnu Purnomo Shidiq
         </h1>
-        <p className="text-sm">Anak Kedua dari keluarga Bapak Indra Utama dan Ibu Harli Yunita</p>
-        <div className="bg-cream-700 p-3 shadow rounded-full w-60 h-60 sm:h-72 sm:w-72 grid place-items-center ">
+        <p className="text-sm">
+          Anak Pertama dari keluarga Bapak Adikun Achmad Shodikun dan Ibu Daimah
+        </p>
+
+        <div className="bg-cream-700 shadow p-3 sm:h-72 sm:w-60 w-40 h-52 rounded-tl-full rounded-tr-full rounded-br-[100px] rounded-bl-[100px] relative">
           <Image
-            src="/images/assets/Perempuan.png"
-            className="w-32 sm:w-40"
-            alt="Foto wanita"
+            src="/images/assets/Laki.png"
+            className="sm:w-40 w-28 absolute left-0 right-0 bottom-0 mx-auto" 
+            alt="Foto Pria"
             width={100}
             height={100}
           />
@@ -40,17 +43,18 @@ export default function About() {
         <h1 className="text-center text-xl ">&</h1>
       </LineTitle>
 
-      <div className="flex flex-col gap-3 items-center">
+      <div className="flex flex-col gap-3 items-center ">
         <h1 className={`${parisienFont.className} text-4xl font-bold`}>
-          Ibnu Purnomo Shidiq
+          Syafira Rahmani{" "}
         </h1>
-        <p className="text-sm">Anak Pertama dari keluarga Bapak Adikun Achmad Shodikun dan Ibu Daimah</p>
-
-        <div className="bg-cream-700 shadow p-3 sm:h-72 sm:w-72 w-60 h-60  rounded-full grid place-items-center">
+        <p className="text-sm">
+          Anak Kedua dari keluarga Bapak Indra Utama dan Ibu Harli Yunita
+        </p>
+        <div className="bg-cream-700 shadow p-3 sm:h-72 sm:w-60 w-40 h-52 rounded-tl-full rounded-tr-full rounded-br-[100px] rounded-bl-[100px] relative">
           <Image
-            src="/images/assets/Laki.png"
-            className="w-32 sm:w-40"
-            alt="Foto wanita"
+            src="/images/assets/Perempuan.png"
+            className="sm:w-40 w-28 absolute left-0 right-0 -bottom-8 mx-auto" 
+            alt="Foto Pria"
             width={100}
             height={100}
           />
