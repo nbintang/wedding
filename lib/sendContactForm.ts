@@ -4,7 +4,7 @@ export const sendContactForm = async (
   assignment: string
 ) => {
   try {
-    await fetch("/api/contact", {
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

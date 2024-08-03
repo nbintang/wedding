@@ -41,3 +41,20 @@ export async function POST(req: NextRequest) {
     });
   }
 }
+
+export async function GET(req: NextRequest) {
+  try {
+    const data = await prisma.user.findMany();
+    return NextResponse.json({
+      success: true,
+      message: 'Data retrieved successfully',
+      data,
+    });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({
+      success: false,
+      message: 'An error occurred while retrieving data.',
+    });
+  }
+}
