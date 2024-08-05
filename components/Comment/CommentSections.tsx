@@ -13,20 +13,24 @@ export default async function CommentSections() {
   const latestComment = [...data.data].reverse();
 
   return (
-    <div className="w-full shadow-md  md:max-w-3xl max-w-sm   bg-cream-100 p-3 rounded-md">
-      {latestComment.map(
-        ({ id, username, messages, createdAt }: CommentProps) => (
-          
-            <Comment
-              key={id}
-              id={id}
-              username={username}
-              messages={messages}
-              createdAt={createdAt}
-            />
-          
+    <div className="w-full shadow  md:max-w-3xl max-w-sm border-cream-900 border-2  bg-cream-100 p-3 rounded-md">
+      {latestComment &&latestComment.length > 0 ? (
+        latestComment.map(
+          ({ id, username, messages, createdAt }: CommentProps) => (
+            
+              <Comment
+                key={id}
+                id={id}
+                username={username}
+                messages={messages}
+                createdAt={createdAt}
+              />
+            
+          )
         )
-      )}
+      ) :(
+        <p className="text-cream-900 text-center text-xl">--Tidak Ada Komentar--</p>
+        )}
     </div>
   );
 }
