@@ -4,7 +4,7 @@
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import Navbar from "@/components/fragments/navigations/Navbar";
-import { AOSInit } from "@/app/aos/aos";
+import { AOSInit } from "@/lib/animation/aos";
 import { Toaster } from "@/components/ui/toaster";
 import { fontHeading, fontBody } from "@/fonts/fonts";
 import ButtonSlideUp from "@/components/core/ButtonSlideUp";

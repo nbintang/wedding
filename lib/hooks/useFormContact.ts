@@ -1,9 +1,10 @@
-import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { sendContactForm } from "../sendContactForm";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "@/components/ui/use-toast";
+import { sendContactForm } from "@/lib/comment";
+
 const formSchema = z.object({
   username: z.string().min(2, {
     message: "nama harus lebih dari 5 karakter",
@@ -43,13 +44,13 @@ const useFormContact = () => {
           description:
             "Terimakasih sudah memberikan pesan, pesan akan di lihat oleh kedua pengantin.",
         });
-        if(!values){
+        if (!values) {
           toast({
             variant: "destructive",
             title: "Gagal Mengirim Pesan",
             description:
               "Terjadi kesalahan saat mengirim pesan, silahkan coba kembali.",
-          })
+          });
           form.reset();
         }
       }
@@ -59,7 +60,7 @@ const useFormContact = () => {
         title: "Gagal Mengirim Pesan",
         description:
           "Terjadi kesalahan pada server, silahkan coba kembali.",
-      })
+      });
       console.error("Error sending contact form:", error);
     }
     setIsLoading(false);

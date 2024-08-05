@@ -1,8 +1,8 @@
 "use client";
 
 import { useTimes } from "@/lib/hooks/useTimes";
-import { LoaderCircleIcon, LoaderIcon } from "lucide-react";
-import { parisienFont } from "@/fonts/fonts";
+import { LoaderCircleIcon } from "lucide-react";
+
 import LineTitle from "../fragments/LineTitle";
 export default function TimesSections() {
   const timeLeft = useTimes();

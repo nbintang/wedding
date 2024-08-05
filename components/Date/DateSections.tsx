@@ -34,7 +34,7 @@ export default function DateSections() {
             </h1>
           </div>
           <p className="text-xl font-semibold">
-            Ahad | 08 September 2024 | 10.00 WIB
+            Ahad | 08 September 2024 | 11.00 WIB - 16.00 WIB
           </p>
         </div>
       </div>

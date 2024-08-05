@@ -30,7 +30,7 @@ export default function Payment() {
           </h3>
         </div>
         <p className="text-cream-900">
-          No. Rekening: <span>{accountNumber}</span>
+          No. Rekening : <span>{accountNumber } </span><span className="text-xs flex items-start justify-center">Atas Nama : Syafira Rahmani</span>
         </p>
         <Button
           variant={"outline"}

@@ -1,18 +1,12 @@
-import { mailOptions, transporter } from "@/config/nodemailer";
-import { prisma } from "@/config/prisma";
-import { NextResponse, NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
+import { mailOptions, transporter } from "@/lib/nodemailer";
 
-export async function POST(req: NextRequest) {
+
+
+export async function POST(request: NextRequest) {
   try {
-    const { username, messages, assignment } = await req.json(); // Parse the JSON body
-    
-    if (!username || !messages || !assignment) {
-      return NextResponse.json({
-        success: false,
-        message: "Request failed! All fields are required.",
-      });
-    }
-
+    const { username, messages, assignment } = await request.json();
     await prisma.user.create({
       data: {
         username,
@@ -29,32 +23,21 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({
-      status: 200,
       success: true,
-      message: "Message sent!",
     });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({
-      success: false,
-      message: "An error occurred while processing your request.",
-    });
+    console.log(error);
   }
 }
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
     const data = await prisma.user.findMany();
+
     return NextResponse.json({
-      success: true,
-      message: 'Data retrieved successfully',
       data,
     });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({
-      success: false,
-      message: 'An error occurred while retrieving data.',
-    });
+    console.log(error);
   }
 }
