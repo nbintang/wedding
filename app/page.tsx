@@ -5,7 +5,7 @@ import Location from "@/components/Location/Location";
 import DateSections from "@/components/Date/DateSections";
 import Hero from "@/components/Hero/Hero";
 
-
+export const dynamic = "force-dynamic";
 export default function Home() {
   return (
     <main className="flex min-h-screen w-full flex-col gap-9 items-center justify-between ">
