@@ -15,15 +15,16 @@ const GoogleMap: React.FC = () => {
         </div>
       )}
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d350.47748145140866!2d106.79769926240986!3d-6.368150336981675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1722613196427!5m2!1sid!2sid"
+        src="https://www.google.com/maps/embed?pb=!1m20!1m8!1m3!1d441.043274528316!2d106.79774825408674!3d-6.368106253905451!3m2!1i1024!2i768!4f13.1!4m9!3e9!4m3!3m2!1d-6.3681186!2d106.7976044!4m3!3m2!1d-6.3682279!2d106.7978225!5e0!3m2!1sid!2sid!4v1722935962591!5m2!1sid!2sid"
+        width="600"
+        height="450"
         style={{ border: 0 }}
         allowFullScreen
         loading="lazy"
         className="rounded-3xl w-[90%] h-72"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Google Map showing location in Jakarta, Indonesia"
-        onLoad={handleLoad}
-      ></iframe>
+        title="Google Maps view of Mushola Al-Mukhlisin location"
+      />
     </div>
   );
 };

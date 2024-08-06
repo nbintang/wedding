@@ -122,7 +122,7 @@ export function SendForm() {
         />
         <Button
           type="submit"
-          className={`bg-cream-700 text-cream-100 hover:bg-cream-700/80 ${
+          className={`bg-cream-700 mt-7 text-cream-100 hover:bg-cream-700/80 ${
             isLoading && "bg-cream-700/80"
           }`}
         >

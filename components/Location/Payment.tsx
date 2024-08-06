@@ -32,7 +32,7 @@ export default function Payment() {
         <p className="text-cream-900">
           No. Rekening: <span>{accountNumber} </span>
           <span className="text-xs flex items-start justify-center">
-            A.N: Syafira Rahmani
+            a.n. Syafira Rahmani
           </span>
         </p>
         <Button
