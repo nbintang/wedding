@@ -8,6 +8,7 @@ export async function getComment() {
       headers: {
         "Content-Type": "application/json",
       },
+      next: { revalidate: 0 },
     });
     if (!res.ok) {
       throw new Error("Failed to fetch comments");

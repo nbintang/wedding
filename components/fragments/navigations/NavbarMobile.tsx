@@ -14,7 +14,7 @@ const NavbarMobile = () => {
         <Button
           variant="default"
           size="icon"
-          className="lg:hidden bg-cream-100 text-cream-900"
+          className="lg:hidden bg-cream-100 hover:bg-cream-300 text-cream-900"
         >
           <MenuIcon className="h-6 w-6" />
           <span className="sr-only">Toggle navigation menu</span>
