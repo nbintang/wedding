@@ -18,7 +18,7 @@ const formSchema = z.object({
   assignment: z.string().min(1, { message: "Pilih Kehadiran anda" }),
 });
 
-const useFormContact = () => {
+const useFormContact = (setComments: any) => {
   const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -32,34 +32,34 @@ const useFormContact = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsLoading(true);
     try {
-      if (values) {
-        await sendContactForm(
-          values.username,
-          values.messages,
-          values.assignment
-        );
-        toast({
-          variant: "default",
-          title: "Pesan Terkirim",
-          description:
-            "Terimakasih sudah memberikan pesan, pesan akan di lihat oleh kedua pengantin.",
-        });
-        if (!values) {
-          toast({
-            variant: "destructive",
-            title: "Gagal Mengirim Pesan",
-            description:
-              "Terjadi kesalahan saat mengirim pesan, silahkan coba kembali.",
-          });
-          form.reset();
-        }
-      }
+      await sendContactForm(
+        values.username,
+        values.messages,
+        values.assignment
+      );
+      toast({
+        variant: "default",
+        title: "Pesan Terkirim",
+        description:
+          "Terimakasih sudah memberikan pesan, pesan akan di lihat oleh kedua pengantin.",
+      });
+
+      setComments((prevComments : any) => [
+        {
+          id: Math.random(), // Generate a unique ID for the new comment
+          username: values.username,
+          messages: values.messages,
+          createdAt: new Date().toISOString(),
+        },
+        ...prevComments,
+      ]);
+
+      form.reset();
     } catch (error) {
       toast({
         variant: "destructive",
         title: "Gagal Mengirim Pesan",
-        description:
-          "Terjadi kesalahan pada server, silahkan coba kembali.",
+        description: "Terjadi kesalahan pada server, silahkan coba kembali.",
       });
       console.error("Error sending contact form:", error);
     }

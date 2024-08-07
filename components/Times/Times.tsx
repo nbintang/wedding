@@ -15,15 +15,15 @@ export default function TimesSections() {
 
   return (
     <div className=" w-full h-96 flex flex-col gap-4 justify-center items-center">
-
-
       <LineTitle>
         <div className="flex gap-3">
           <h1 className="sm:text-5xl text-3xl font-bold text-cream-900">08</h1>
           <span className="border-r-4 p-2 border-cream-900"></span>
           <h1 className="sm:text-5xl text-3xl font-bold text-cream-900">09</h1>
           <span className="border-r-4 p-2 border-cream-900 "></span>
-          <h1 className="sm:text-5xl text-3xl font-bold text-cream-900">2024</h1>
+          <h1 className="sm:text-5xl text-3xl font-bold text-cream-900">
+            2024
+          </h1>
         </div>
       </LineTitle>
       <div className="flex flex-col gap-3 items-center">
@@ -52,8 +52,8 @@ export default function TimesSections() {
           </div>
         ) : (
           <span className="text-base text-center font-bold text-cream-900">
-            Acara Sedang Berlangsung!, Terima kasih sudah mengunjungi undangan ini
-            ini
+            Acara Sedang Berlangsung!, Terima kasih sudah mengunjungi undangan
+            ini ini
           </span>
         )}
       </div>

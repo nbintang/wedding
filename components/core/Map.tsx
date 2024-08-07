@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+
+
 const GoogleMap: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -15,7 +17,7 @@ const GoogleMap: React.FC = () => {
         </div>
       )}
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3965.199530262661!2d106.79782900000001!3d-6.368219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMjInMDUuNiJTIDEwNsKwNDcnNTIuMiJF!5e0!3m2!1sid!2sid!4v1722951664348!5m2!1sid!2sid"
+        src={process.env.NEXT_PUBLIC_GOOGLE_MAP_URL}
         width="600"
         height="450"
         onLoad={handleLoad}

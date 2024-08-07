@@ -8,12 +8,16 @@ interface CommentProps {
   createdAt: string;
 }
 
-export default async function CommentSections() {
-  const data = await getComment();
-  const latestComment = [...data.data].reverse();
+interface CommentSectionsProps {
+ comments: CommentProps[];
+}
 
+export default async function CommentSections({
+comments
+}: CommentSectionsProps) {
+  const latestComment = [...comments].reverse()
   return (
-    <div className="w-full shadow  md:max-w-3xl max-w-sm border-cream-900 border-2  bg-cream-100 p-3 rounded-md">
+    <div className="w-full shadow h-[500px] overflow-scroll no-scrollbar md:max-w-3xl max-w-sm border-cream-900 border-2  bg-cream-100 p-3 rounded-md">
       {latestComment &&latestComment.length > 0 ? (
         latestComment.map(
           ({ id, username, messages, createdAt }: CommentProps) => (
@@ -25,6 +29,7 @@ export default async function CommentSections() {
                 messages={messages}
                 createdAt={createdAt}
               />
+              
             
           )
         )

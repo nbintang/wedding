@@ -21,14 +21,14 @@ import {
 } from "../ui/select";
 import useFormContact from "@/lib/hooks/useFormContact";
 
-export function SendForm() {
-  const { form, onSubmit, isLoading } = useFormContact();
+export function SendForm({ setComments }: any) {
+  const { form, onSubmit, isLoading } = useFormContact(setComments);
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-4 sm:min-w-[500px] min-w-[350px]  shadow-md p-3 bg-cream-900 rounded-md "
+        className="flex flex-col gap-4 sm:min-w-[500px] min-w-[350px] shadow-md p-3 bg-cream-900 rounded-md"
       >
         <FormField
           control={form.control}
@@ -42,11 +42,10 @@ export function SendForm() {
               <FormControl>
                 <Input
                   placeholder="Masukkan Nama"
-                  className="placeholder:text-cream-900  bg-cream-100"
+                  className="placeholder:text-cream-900 bg-cream-100"
                   {...field}
                 />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
@@ -63,11 +62,10 @@ export function SendForm() {
               <FormControl>
                 <Textarea
                   placeholder="Kirim pesan yang ingin disampaikan"
-                  className="placeholder:text-cream-900 h-32 bg-cream-100  "
+                  className="placeholder:text-cream-900 h-32 bg-cream-100"
                   {...field}
                 />
               </FormControl>
-
               <FormMessage />
             </FormItem>
           )}
@@ -77,9 +75,7 @@ export function SendForm() {
           name="assignment"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-cream-100 text-xl ">
-                Kehadiran
-              </FormLabel>
+              <FormLabel className="text-cream-100 text-xl">Kehadiran</FormLabel>
               <FormControl>
                 <Select
                   onValueChange={field.onChange}
@@ -93,7 +89,6 @@ export function SendForm() {
                       />
                     </SelectTrigger>
                   </FormControl>
-
                   <SelectContent className="placeholder:text-cream-900 text-cream-900 bg-cream-100">
                     <SelectItem
                       value="Hadir dalam acara"
@@ -127,7 +122,7 @@ export function SendForm() {
           }`}
         >
           {isLoading ? (
-            <div className="w-5 h-5 border-2 border-cream-900 rounded-full animate-spin border-t-transparent"></div>
+            <span className="flex items-center gap-3"><div className="w-5 h-5 border-2 border-cream-900 rounded-full animate-spin border-t-transparent"></div> <p className="text-cream-900 text-sm">Memuat...</p></span>
           ) : (
             "Kirim"
           )}
