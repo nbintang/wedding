@@ -6,6 +6,7 @@ import Location from "@/components/Location/Location";
 import DateSections from "@/components/Date/DateSections";
 import Hero from "@/components/Hero/Hero";
 import Opening from "@/components/Opening/Opening";
+import Footer from "@/components/fragments/footer/Footer";
 
 export const dynamic = "force-dynamic";
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <DateSections />
       <Location />
       <Contact />
+      <Footer/>
     </main>
           </Opening>
   );

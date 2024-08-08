@@ -20,15 +20,18 @@ import {
   SelectValue,
 } from "../ui/select";
 import useFormContact from "@/lib/hooks/useFormContact";
+import { CommentProps } from "@/types/CommentSchemas";
 
-export function SendForm({ setComments }: any) {
+export function SendForm({ setComments }: {
+  setComments: React.Dispatch<React.SetStateAction<CommentProps[]>>;
+}) {
   const { form, onSubmit, isLoading } = useFormContact(setComments);
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-4 sm:min-w-[500px] min-w-[350px] shadow-md p-3 bg-cream-900 rounded-md"
+        className="flex flex-col gap-4 min-w-0 w-full mx-3 sm:max-w-lg max-w-sm p-3 shadow-md  bg-cream-900 rounded-md"
       >
         <FormField
           control={form.control}

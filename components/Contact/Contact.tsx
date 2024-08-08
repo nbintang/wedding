@@ -3,14 +3,17 @@ import { SendForm } from "./Form";
 import CommentSections from "./Comment/CommentSections";
 import LineTitle from "../fragments/LineTitle";
 import { getComment } from "@/lib/comment";
+import { CommentProps } from "@/types/CommentSchemas";
+
+
 
 export default function Contact() {
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState<CommentProps[]>([]);
 
   useEffect(() => {
     (async () => {
       const data = await getComment();
-      setComments(data.data);
+      setComments( [...data.data].reverse());
     })();
   }, []);
 

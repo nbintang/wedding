@@ -1,11 +1,7 @@
+import { CommentProps } from '@/types/CommentSchemas'
 import React from 'react'
 
-interface CommentProps {
-    id: number;
-    username: string;
-    messages: string;
-    createdAt: string;
-}
+
 const Comment = ({
   id,
   username,

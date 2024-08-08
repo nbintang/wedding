@@ -6,6 +6,7 @@ import Payment from "./Payment";
 import LayoutSection from "../fragments/LayoutSection";
 import LineTitle from "../fragments/LineTitle";
 import Link from "next/link";
+import Attitude from "./Attitude";
 
 // Dynamically import the GoogleMap component with no SSR
 const GoogleMap = dynamic(() => import("../core/Map"), { ssr: false });
@@ -39,7 +40,9 @@ export default function Location() {
           Doa Restu anda merupakan karunia yang sangat berarti bagi kami.
         </p>
       </div>
-      <Payment />
+
+      <Attitude/>
+      {/* <Payment /> */}
     </LayoutSection>
   );
 }

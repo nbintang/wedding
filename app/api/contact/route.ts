@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
-import { mailOptions, transporter } from "@/lib/nodemailer";
-
+import prisma from "@/config/prisma";
+import { mailOptions, transporter } from "@/config/nodemailer";
 
 
 export async function POST(request: NextRequest) {
@@ -14,6 +13,7 @@ export async function POST(request: NextRequest) {
         assignment,
       },
     });
+
 
     await transporter.sendMail({
       ...mailOptions,

@@ -39,9 +39,6 @@ const Opening = ({ children }: { children: React.ReactNode }) => {
           >
             Open Invitation
           </button>
-          <h1 className="text-cream-700 text-center text-xs sm:text-sm">
-            Mohon maaf apabila ada kesalahan penulisan nama/gelar
-          </h1>
         </div>
       </div>
       {isOpen && children}

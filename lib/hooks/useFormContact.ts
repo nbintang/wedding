@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "@/components/ui/use-toast";
 import { sendContactForm } from "@/lib/comment";
+import { CommentProps} from "@/types/CommentSchemas";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -18,7 +19,7 @@ const formSchema = z.object({
   assignment: z.string().min(1, { message: "Pilih Kehadiran anda" }),
 });
 
-const useFormContact = (setComments: any) => {
+const useFormContact = (setComments: React.Dispatch<React.SetStateAction<CommentProps[]>>) => {
   const [isLoading, setIsLoading] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -46,7 +47,7 @@ const useFormContact = (setComments: any) => {
 
       setComments((prevComments : any) => [
         {
-          id: Math.random(), // Generate a unique ID for the new comment
+          id: prevComments.length + 1,
           username: values.username,
           messages: values.messages,
           createdAt: new Date().toISOString(),
