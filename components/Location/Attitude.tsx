@@ -50,7 +50,7 @@ export default function Attitude() {
         </h1>
       </LineTitle>
 
-      <div>
+      <div className="flex flex-col items-center">
         <p className="text-center sm:text-lg text-sm max-w-md text-cream-100">
           Tanpa mengurangi rasa hormat, ada hal-hal dalam adab seorang muslim
           ketika menghadiri walimah yang harus diperhatikan :

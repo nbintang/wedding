@@ -12,15 +12,21 @@ export const dynamic = "force-dynamic";
 export default function Home() {
   return (
     <Opening>
-    <main className="flex min-h-screen w-full flex-col gap-9 items-center justify-between ">
-      <Hero />
-      <TimesSections />
-      <About />
-      <DateSections />
-      <Location />
-      <Contact />
-      <Footer/>
-    </main>
-          </Opening>
+      <main className="flex min-h-screen w-full flex-col gap-9 items-center justify-between ">
+        <Hero />
+        <TimesSections />
+        <div className=" flex flex-col items-center gap-7 min-w-0 max-w-md sm:max-w-3xl mx-4">
+          <About />
+          <DateSections />
+          <Location />
+        </div>
+        <div className="bg-cream-300 py-4 w-full flex justify-center">
+          <div className=" flex flex-col gap-7 items-center w-full min-w-0 max-w-md sm:max-w-lg mx-4">
+            <Contact />
+          </div>
+        </div>
+        <Footer />
+      </main>
+    </Opening>
   );
 }

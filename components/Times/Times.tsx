@@ -33,20 +33,20 @@ export default function TimesSections() {
           </>
         ) : timeLeft.days !== undefined ? (
           <div className="flex gap-3">
-            <p className="flex flex-col bg-cream-900 rounded-md  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
-              <span className="text-5xl font-semibold">{timeLeft.days}</span>{" "}
+            <p className="flex flex-col bg-cream-900 rounded-bl-md rounded-tl-md  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
+              <span className="text-4xl font-semibold">{timeLeft.days}</span>{" "}
               <span className="text-xl">Hari</span>{" "}
             </p>
-            <p className="flex flex-col bg-cream-900 rounded-md  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
-              <span className="text-5xl font-semibold">{timeLeft.hours}</span>{" "}
+            <p className="flex flex-col bg-cream-900 rounded-sm  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
+              <span className="text-4xl font-semibold">{timeLeft.hours}</span>{" "}
               <span className="text-xl">Jam</span>{" "}
             </p>
-            <p className="flex flex-col bg-cream-900 rounded-md  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
-              <span className="text-5xl font-semibold">{timeLeft.minutes}</span>{" "}
+            <p className="flex flex-col bg-cream-900 rounded-sm  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
+              <span className="text-4xl font-semibold">{timeLeft.minutes}</span>{" "}
               <span className="text-xl">Menit</span>{" "}
             </p>
-            <p className="flex flex-col bg-cream-900 rounded-md  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
-              <span className="text-5xl font-semibold">{timeLeft.seconds}</span>{" "}
+            <p className="flex flex-col bg-cream-900 rounded-br-md rounded-tr-md  text-cream-100 min-w-20 md:min-w-36  py-4 items-center">
+              <span className="text-4xl font-semibold">{timeLeft.seconds}</span>{" "}
               <span className="text-xl">Detik</span>{" "}
             </p>
           </div>

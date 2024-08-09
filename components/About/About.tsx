@@ -7,7 +7,7 @@ import LineTitle from "../fragments/LineTitle";
 export default function About() {
   return (
     <LayoutSection id="about">
-      <div className="max-w-lg space-y-6 mb-4">
+      <div className="space-y-6 mb-4">
         <h1
           className={`${arabicFont.className} sm:text-3xl text-xl font-semibold `}
         >
