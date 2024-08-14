@@ -31,7 +31,7 @@ export function SendForm({ setComments }: {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-4 w-full p-4 shadow-md  bg-cream-900 rounded-md"
+        className="flex  flex-col min-w-full gap-4 p-4 shadow-md  bg-cream-900 rounded-md"
       >
         <FormField
           control={form.control}

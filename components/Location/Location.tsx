@@ -37,7 +37,7 @@ export default function Location() {
         )}
 
         <p className="text-center sm:text-lg text-sm max-w-xs text-cream-100">
-          Doa Restu anda merupakan karunia yang sangat berarti bagi kami.
+          Doa Restu Anda merupakan karunia yang sangat berarti bagi kami.
         </p>
       </div>
 
